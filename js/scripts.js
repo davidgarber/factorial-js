@@ -5,3 +5,14 @@ var factorial = function(userNum) {
   };
   return total;
 }
+
+$(document).ready(function(){
+
+$("form#factorial").submit(function(event){
+  var userNum = parseInt($("input#factorial-num").val());
+  $("#result").show();
+  $(".factorial-answer").text(factorial(userNum));
+  event.preventDefault();
+  });
+
+});
